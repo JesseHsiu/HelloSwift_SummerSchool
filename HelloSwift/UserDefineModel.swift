@@ -46,7 +46,7 @@ class UserDefineModel : NSObject{
         super.init()
         
         self.currenName = randomName()
-        self.timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
+        self.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
         println("UserDefineModel init")
     }
     
