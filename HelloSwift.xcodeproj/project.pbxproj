@@ -13,6 +13,8 @@
 		56BCA6781B77778D00D4F85C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56BCA6771B77778D00D4F85C /* Images.xcassets */; };
 		56BCA67B1B77778D00D4F85C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56BCA6791B77778D00D4F85C /* LaunchScreen.xib */; };
 		56BCA6871B77778D00D4F85C /* HelloSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BCA6861B77778D00D4F85C /* HelloSwiftTests.swift */; };
+		56BCA6931B77789A00D4F85C /* UserDefineButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BCA6921B77789A00D4F85C /* UserDefineButton.swift */; };
+		56BCA6951B7778C700D4F85C /* UserDefineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BCA6941B7778C700D4F85C /* UserDefineModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		56BCA6801B77778D00D4F85C /* HelloSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		56BCA6851B77778D00D4F85C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56BCA6861B77778D00D4F85C /* HelloSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloSwiftTests.swift; sourceTree = "<group>"; };
+		56BCA6921B77789A00D4F85C /* UserDefineButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefineButton.swift; sourceTree = "<group>"; };
+		56BCA6941B7778C700D4F85C /* UserDefineModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefineModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 		56BCA66D1B77778D00D4F85C /* HelloSwift */ = {
 			isa = PBXGroup;
 			children = (
+				56BCA6921B77789A00D4F85C /* UserDefineButton.swift */,
+				56BCA6941B7778C700D4F85C /* UserDefineModel.swift */,
 				56BCA6701B77778D00D4F85C /* AppDelegate.swift */,
 				56BCA6721B77778D00D4F85C /* ViewController.swift */,
 				56BCA6741B77778D00D4F85C /* Main.storyboard */,
@@ -212,8 +218,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56BCA6931B77789A00D4F85C /* UserDefineButton.swift in Sources */,
 				56BCA6731B77778D00D4F85C /* ViewController.swift in Sources */,
 				56BCA6711B77778D00D4F85C /* AppDelegate.swift in Sources */,
+				56BCA6951B7778C700D4F85C /* UserDefineModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
