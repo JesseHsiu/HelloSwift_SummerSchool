@@ -21,6 +21,9 @@ class ViewController: UIViewController {
         
         userDefineModel = UserDefineModel()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("updateUILabels"), name: "objectUpdated", object: nil)
+        
+        userDefineButton.addTarget(self, action: Selector("buttonPressed"), forControlEvents: UIControlEvents.TouchUpInside)
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -34,6 +37,14 @@ class ViewController: UIViewController {
     {
         nameLabel.text = userDefineModel!.currenName
         levelLabel.text = userDefineModel!.level.rawValue
+    }
+    
+    func buttonPressed()
+    {
+        let alert = UIAlertController(title: "Yo", message: "you pressed button", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "ok", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+        
     }
 
 }
