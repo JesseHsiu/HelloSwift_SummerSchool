@@ -32,5 +32,38 @@ enum TypeOfLevel : String
 
 
 class UserDefineModel : NSObject{
+    let names = [ "Josh", "Tony", "包子", "LJW", "冠廷", "元輔", "Timo", "Jesse"]
     
+    var currenName :NSString?
+    var volume: TypeOfLevel {
+        return TypeOfLevel.randomLevel()
+    }
+    
+    var timer : NSTimer?
+    
+    override init()
+    {
+        super.init()
+        
+        self.currenName = randomName()
+        self.timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
+        println("UserDefineModel init")
+    }
+    
+    deinit
+    {
+        println("UserDefineModel deinit")
+    }
+    
+    func randomName() -> String
+    {
+        return names[Int(arc4random_uniform(UInt32(names.count)))]
+    }
+    
+    func update()
+    {
+        println("updated call")
+        currenName = randomName()
+        NSNotificationCenter.defaultCenter().postNotificationName("objectUpdated", object: nil)
+    }
 }
