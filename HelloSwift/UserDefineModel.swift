@@ -34,8 +34,8 @@ enum TypeOfLevel : String
 class UserDefineModel : NSObject{
     let names = [ "Josh", "Tony", "包子", "LJW", "冠廷", "元輔", "Timo", "Jesse"]
     
-    var currenName :NSString?
-    var volume: TypeOfLevel {
+    var currenName :String?
+    var level: TypeOfLevel {
         return TypeOfLevel.randomLevel()
     }
     

@@ -10,12 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
-
+    var userDefineModel : UserDefineModel?
     @IBOutlet var userDefineButton: UserDefineButton!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var levelLabel: UILabel!
     
+    
+    
     override func viewDidLoad() {
+        
+        userDefineModel = UserDefineModel()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("updateUILabels"), name: "objectUpdated", object: nil)
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -25,6 +30,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func updateUILabels()
+    {
+        nameLabel.text = userDefineModel!.currenName
+        levelLabel.text = userDefineModel!.level.rawValue
+    }
 
 }
 
